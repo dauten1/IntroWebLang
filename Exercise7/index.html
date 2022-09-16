@@ -1,0 +1,33 @@
+<html>
+
+    <body>
+         <!-- places a lighter colored text inside the textbox while the textbox is empty-->>
+        <input id="name-input" type="text" placeholder="Enter your name" /> 
+        <button id="my-button">Click Me</button> <!--creates a button next to the textbox that says "Click Me"-->
+        
+        
+        <script>
+            //set variable myButton to the button that was created previously
+        var myButton = document.querySelector('#my-button'); 
+        //set variable to equal what is inputted into the textbox
+        var nameInput = document.querySelector('#name-input'); 
+        
+        //checks the button for if it has been clicked
+        //if the button has been clicked then the function will begin
+        myButton.addEventListener('click', function () 
+        {
+        // The if statement makes sure that the textbox isn't empty when the button is clicked
+            if (nameInput.value !== '')
+            {
+                //the button has been clicked
+                //the textbox was not empty
+                //now a small alert window will display
+                //Hello *whatever the user inputted into the textbox*
+                alert('Hello ' + nameInput.value);
+            }
+        });
+</script>
+
+    </body>
+
+</html>
